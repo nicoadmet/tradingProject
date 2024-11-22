@@ -1,0 +1,157 @@
+/********** RESET **********/
+a {
+    text-decoration: none;
+    
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* RAIZ */ 
+:root{
+    --first-font: "Roboto", sans-serif;;
+    --second-font: "Nunito", sans-serif; 
+    --first-color: #2E7D32;
+    --second-color: #1E88E5;
+    --third-color: #FFC107;
+    --fourth-color: #F5F5F5;
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
+
+/* FUENTE DE TEXTO Y FONDO*/
+body {
+    font-family: var(--first-font);
+    background-color: var(--fourth-color);
+}
+    
+h1, h2, h3, h4{
+    font-family: var(--second-font);
+    line-height: 1.5;
+    color: var(--first-color);
+}
+
+/* COLOR DE TEXTO*/
+h1, h2 {
+    color: var(--first-color);
+}
+h3 {
+    color: var(--third-color);
+}
+b {
+    color: var(--fourth-color);
+}
+mark {
+    background-color: var(--fourth-color);
+}
+
+/********FIN DEFAULT*********/
+
+/********FORMULARIO*********/
+h1{
+    text-align: center;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    background-color: var(--white-color);
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+form div{
+    padding: 10px;
+}
+
+form div label{
+    padding-left: 20px;
+    font-family: var(--second-font);
+}
+
+form div input{
+    font-family: var(--second-font);
+    font-size: 0.9rem;
+}
+
+/*BOTON*/
+/*añadir*/
+#submitButton{
+    position: relative;
+    text-decoration: none;
+    width: 6rem;
+    height: 2.6rem;
+    border: 2px solid var(--first-color);
+    color: var(--black-color);
+    letter-spacing: 0.8px;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+#submitButton::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: -200%;
+    background-color: #84ff00;
+    border-radius:50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+#submitButton:hover::before{
+    top: 0;
+    border-radius: 0%;
+}
+
+
+/************** TABLA PRINCIPAL  ***************/
+/****TABLA****/
+
+.operation-table-container{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+.main-table{
+    width: 100%;
+}
+
+table, tr, th{
+    border: 1px solid;
+    color: var(--black-color);
+    border-collapse: collapse; /*fuciona bordes*/
+}
+
+table{
+    width: 100%;
+}
+
+
+th{
+    font-family: var(--first-font);
+    padding: 12px 8px;
+}
+
+td{
+    font-family: var(--second-font);
+    padding: 4px;
+    border: 1px solid black;
+}
+
+
