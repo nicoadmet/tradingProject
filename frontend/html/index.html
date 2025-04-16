@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de operaciones</title>
+    <link rel="stylesheet" href="./../../frontend/css/styles.css">
+</head>
+
+<body>
+    <!--formulario de ingreso de datos-->
+    <h1>Ingrese los datos de la operación</h1>
+    <div class="form-container">
+        <form class="main-form" id="mainForm">
+            <div>
+                <select id="activeSelect" name="activeSelect" required>
+                    <option value="ETH/USDT">ETH/USDT</option>
+                    <option value="BTC/USDT">BTC/USDT</option>
+                    <option value="GBP/USD">GBP/USD</option>
+                    <option value="USD/CAD">USD/CAD</option>
+                    <option value="EUR/USD">EUR/USD</option>
+                    <option value="USD/JPY">USD/JPY</option>
+                    <option value="USD/CHF">USD/CHF</option>
+                    <option value="AUD/USD">AUD/USD</option>
+                    <option value="NZD/USD">NZD/USD</option>
+                </select>
+
+                <label for="shortInput">Short</label>
+                <input type="radio" value="short" id="shortInput" name="shortLongInput" required>
+                <label for="longInput">Long</label>
+                <input type="radio" value="long" id="longInput" name="shortLongInput" required>
+            </div>
+            
+            <div>
+                <label for="investmentInput">Inversion</label>
+                <input type="number" id="investmentInput" name="investmentInput" required>
+
+                <label for="commissionInput">Comision</label>
+                <input type="number" id="commissionInput" name="commissionInput" required>
+            </div>    
+            
+            <div>
+                <label for="entrancePriceInput">Precio entrada</label>
+                <input type="number" id="entrancePriceInput" name="entrancePriceInput" required>
+            
+                <label for="exitPriceInput">Precio salida</label>
+                <input type="number" id="exitPriceInput" name="exitPriceInput" required>
+            </div>
+
+            <div>          
+                <label for="entryDateInput">Fecha entrada</label>
+                <input type="date" id="entryDateInput" name="entryDateInput" required>
+            
+                <label for="exitDateInput">Fecha salida</label>
+                <input type="date" id="exitDateInput" name="exitDateInput" required>
+            </div>
+            
+            <div>
+                <button type="submit" id="submitButton">Añadir</button>
+            </div>
+            
+        </form>
+    </div>
+    
+    <!--tabla principal-->
+    <div class="operation-table-container">
+        <table id="OperationTable">
+            <thead>
+                <tr>
+                    <th>Activo</th>
+                    <th>Compra/Venta</th>
+                    <th>Inversión</th>
+                    <th>Comisión</th>
+                    <th>Precio entrada</th>
+                    <th>Precio salida</th>
+                    <th>Ganancia/Perdida</th>
+                    <th>ROI%</th>
+                    <th>Fecha de entrada</th>
+                    <th>Fecha de salida</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="/frontend/js/scripts.js"></script>
+</body>
+</html>
